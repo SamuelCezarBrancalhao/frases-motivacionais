@@ -1,27 +1,42 @@
-#container {
-  text-align: center;
+@import url();
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+.fundo{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background: url(http://picsum.photos/600/1200/?blur)
+                  center no-repeat,
+                  linear-gradient(to bottom, #ef32d9, #89fffd, #f34848);
+  background-blend-mode: overlay;
 }
 
-#container strong {
+.conteudo {
+  font-family: 'Indle Flower', cursive;
+  background: #ffffffbb;
+  margin: 0 24px;
+  padding: 12px;
+  border-radius: 16px;
+}
+
+.frase{
+  font-size: 30px;
+}
+
+.autor{
   font-size: 20px;
-  line-height: 26px;
+  font-weight: bold;
+  text-align: end;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+.fade-in {
+	animation: fade-in 2.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
-#container a {
-  text-decoration: none;
+ @keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
